@@ -42,21 +42,24 @@ const ButtonSheetModal = ({ info, setInfo, modalVisible, setModalVisible }) => {
         r.json()
           .then(async (data) => {
             axios
-              .post("https://running-app-be-0.vercel.app/api/users/Infov2", {
-                UserID: info.user,
-                fullname: info.fullname,
-                mail: info.mail,
-                address: info.address,
-                birthday: info.birthday,
-                description: info.description,
-                gender: info.gender,
-                height: info.height,
-                weight: info.weight,
-                job: info.job,
-                phone: info.phone,
-                note: info.note,
-                image: data.url,
-              })
+              .post(
+                "https://running-app-be-0-git-main-voquocminh1209.vercel.app/api/users/Infov2",
+                {
+                  UserID: info.user,
+                  fullname: info.fullname,
+                  mail: info.mail,
+                  address: info.address,
+                  birthday: info.birthday,
+                  description: info.description,
+                  gender: info.gender,
+                  height: info.height,
+                  weight: info.weight,
+                  job: info.job,
+                  phone: info.phone,
+                  note: info.note,
+                  image: data.url,
+                }
+              )
               .then(async (res) => {
                 setInfo(res.data);
               })

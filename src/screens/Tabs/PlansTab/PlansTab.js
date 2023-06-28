@@ -64,7 +64,9 @@ function PlansTab({ navigation }) {
   useEffect(() => {
     let isMounted = true;
     _retrieveData();
-    Axios.get("https://running-app-be-0.vercel.app/api/plan/")
+    Axios.get(
+      "https://running-app-be-0-git-main-voquocminh1209.vercel.app/api/plan/"
+    )
       .then((res) => {
         if (isMounted) {
           setArr(res.data);

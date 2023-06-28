@@ -24,10 +24,13 @@ function Login({ navigation }) {
   const [isLoading, setIsLoading] = useState(true);
   const handleLogin = () => {
     console.log(username, password);
-    Axios.post("https://running-app-be-0.vercel.app/api/users/login", {
-      username,
-      password,
-    })
+    Axios.post(
+      "https://running-app-be-0-git-main-voquocminh1209.vercel.app/api/users/login",
+      {
+        username,
+        password,
+      }
+    )
       .then((res) => {
         _storeData("authToken", res.data);
         _storeData("username", username);

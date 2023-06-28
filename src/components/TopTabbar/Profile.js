@@ -54,7 +54,7 @@ function Profile({ navigation }) {
       var vl = jwt_decode(token);
       console.log("Token decode", vl._id);
       Axios.get(
-        `https://running-app-be-0.vercel.app/api/users/getInfo/${vl._id}`
+        `https://running-app-be-0-git-main-voquocminh1209.vercel.app/api/users/getInfo/${vl._id}`
       )
         .then((res) => {
           if (!clean) {

@@ -81,11 +81,14 @@ function Register({ navigation }) {
       return 0;
     }
 
-    Axios.post("https://running-app-be-0.vercel.app/api/users/register", {
-      username,
-      password,
-      mail: mail,
-    })
+    Axios.post(
+      "https://running-app-be-0-git-main-voquocminh1209.vercel.app/api/users/register",
+      {
+        username,
+        password,
+        mail: mail,
+      }
+    )
       .then((res) => {
         console.log(res);
         Alert.alert("đăng ký thành công");

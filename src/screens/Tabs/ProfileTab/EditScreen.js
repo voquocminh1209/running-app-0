@@ -116,21 +116,24 @@ function EditScreen({ navigation }) {
       console.log("address", address);
 
       await axios
-        .post("https://running-app-be-0.vercel.app/api/users/Infov2", {
-          UserID,
-          fullname,
-          mail,
-          description,
-          job,
-          phone,
-          gender,
-          address,
-          birthday,
-          height,
-          weight,
-          image,
-          note,
-        })
+        .post(
+          "https://running-app-be-0-git-main-voquocminh1209.vercel.app/api/users/Infov2",
+          {
+            UserID,
+            fullname,
+            mail,
+            description,
+            job,
+            phone,
+            gender,
+            address,
+            birthday,
+            height,
+            weight,
+            image,
+            note,
+          }
+        )
         .then((res) => {
           console.log(res.data);
           navigation.dispatch(resetProfile);

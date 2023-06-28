@@ -17,7 +17,8 @@ const windowWidth = Dimensions.get("window").width;
 function FoodScreen({ navigation }) {
   const [isLoading, setLoading] = useState(true);
   const [foodDatas, setFoodDatas] = useState([]);
-  var postApi = "https://running-app-be-0.vercel.app/api/food";
+  var postApi =
+    "https://running-app-be-0-git-main-voquocminh1209.vercel.app/api/food";
   let typeFood = String(navigation.getParam("type"));
   var listData = [];
 

@@ -32,7 +32,10 @@ function Activities({ navigation }) {
   };
   //hàm fecth data
   const fetchData = (userid) => {
-    fetch("https://running-app-be-0.vercel.app/api/activities/userID/" + userid)
+    fetch(
+      "https://running-app-be-0-git-main-voquocminh1209.vercel.app/api/activities/userID/" +
+        userid
+    )
       .then((res) => res.json())
       .then((json) => {
         json.map((data) => {

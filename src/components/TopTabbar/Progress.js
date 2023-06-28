@@ -182,7 +182,7 @@ function Progress({ navigation }) {
   const _fetchdata = (userid) => {
     //today
     fetch(
-      "https://running-app-be-0.vercel.app/api/activities/userID/" +
+      "https://running-app-be-0-git-main-voquocminh1209.vercel.app/api/activities/userID/" +
         userid +
         "/date/" +
         today
@@ -197,7 +197,7 @@ function Progress({ navigation }) {
       .catch((err) => console.log("fecth chưa xong today"));
     //monday
     fetch(
-      "https://running-app-be-0.vercel.app/api/activities/userID/" +
+      "https://running-app-be-0-git-main-voquocminh1209.vercel.app/api/activities/userID/" +
         userid +
         "/date/" +
         mon
@@ -212,7 +212,7 @@ function Progress({ navigation }) {
       .catch((err) => console.log("fecth chưa xong mon"));
     //tuesday
     fetch(
-      "https://running-app-be-0.vercel.app/api/activities/userID/" +
+      "https://running-app-be-0-git-main-voquocminh1209.vercel.app/api/activities/userID/" +
         userid +
         "/date/" +
         tue
@@ -227,7 +227,7 @@ function Progress({ navigation }) {
       .catch((err) => console.log("fecth chưa xong tue"));
     //wednesday
     fetch(
-      "https://running-app-be-0.vercel.app/api/activities/userID/" +
+      "https://running-app-be-0-git-main-voquocminh1209.vercel.app/api/activities/userID/" +
         userid +
         "/date/" +
         wed
@@ -242,7 +242,7 @@ function Progress({ navigation }) {
       .catch((err) => console.log("fecth chưa xong wed"));
     //thurday
     fetch(
-      "https://running-app-be-0.vercel.app/api/activities/userID/" +
+      "https://running-app-be-0-git-main-voquocminh1209.vercel.app/api/activities/userID/" +
         userid +
         "/date/" +
         thu
@@ -257,7 +257,7 @@ function Progress({ navigation }) {
       .catch((err) => console.log("fecth chưa xong thu"));
     //friday
     fetch(
-      "https://running-app-be-0.vercel.app/api/activities/userID/" +
+      "https://running-app-be-0-git-main-voquocminh1209.vercel.app/api/activities/userID/" +
         userid +
         "/date/" +
         fri
@@ -272,7 +272,7 @@ function Progress({ navigation }) {
       .catch((err) => console.log("fecth chưa xong fri"));
     //saturday
     fetch(
-      "https://running-app-be-0.vercel.app/api/activities/userID/" +
+      "https://running-app-be-0-git-main-voquocminh1209.vercel.app/api/activities/userID/" +
         userid +
         "/date/" +
         sat
@@ -287,7 +287,7 @@ function Progress({ navigation }) {
       .catch((err) => console.log("fecth chưa xong sat"));
     //sunday
     fetch(
-      "https://running-app-be-0.vercel.app/api/activities/userID/" +
+      "https://running-app-be-0-git-main-voquocminh1209.vercel.app/api/activities/userID/" +
         userid +
         "/date/" +
         sun
@@ -302,7 +302,7 @@ function Progress({ navigation }) {
       .catch((err) => console.log("fecth chưa xong sun"));
     //this week
     fetch(
-      "https://running-app-be-0.vercel.app/api/activities/userID/" +
+      "https://running-app-be-0-git-main-voquocminh1209.vercel.app/api/activities/userID/" +
         userid +
         "/thisweek"
     )
@@ -316,7 +316,7 @@ function Progress({ navigation }) {
       .catch((err) => console.log("fecth chưa xong chart"));
     //this month
     fetch(
-      "https://running-app-be-0.vercel.app/api/activities/userID/" +
+      "https://running-app-be-0-git-main-voquocminh1209.vercel.app/api/activities/userID/" +
         userid +
         "/month/" +
         this_month
@@ -331,7 +331,7 @@ function Progress({ navigation }) {
       .catch((err) => console.log("fecth chưa xong this month"));
     //last month
     fetch(
-      "https://running-app-be-0.vercel.app/api/activities/userID/" +
+      "https://running-app-be-0-git-main-voquocminh1209.vercel.app/api/activities/userID/" +
         userid +
         "/month/" +
         last_month

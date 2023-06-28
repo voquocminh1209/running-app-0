@@ -28,10 +28,13 @@ function AppLoading({ navigation }) {
         const hearders = {
           "auth-token": token,
         };
-        Axios.get("https://running-app-be-0.vercel.app/api/users/", {
-          headers: hearders,
-          timeout: 3000,
-        })
+        Axios.get(
+          "https://running-app-be-0-git-main-voquocminh1209.vercel.app/api/users/",
+          {
+            headers: hearders,
+            timeout: 3000,
+          }
+        )
           .then((res) => {
             console.log(res.status);
             if (value !== null) navigation.navigate("App");

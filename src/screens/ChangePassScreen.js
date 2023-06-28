@@ -43,11 +43,14 @@ function ChangePassScreen({ navigation }) {
         "Oops!",
         "New password is different from confirm password"
       );
-    Axios.post("https://running-app-be-0.vercel.app/api/users/changePass", {
-      username,
-      currentPassword,
-      newPassword,
-    })
+    Axios.post(
+      "https://running-app-be-0-git-main-voquocminh1209.vercel.app/api/users/changePass",
+      {
+        username,
+        currentPassword,
+        newPassword,
+      }
+    )
       .then((res) => {
         Alert.alert("Success ✓", "Change password successfully!");
       })

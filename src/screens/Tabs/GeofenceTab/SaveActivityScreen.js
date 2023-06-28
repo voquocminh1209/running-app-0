@@ -71,7 +71,8 @@ export default class SaveActivityScreen extends React.Component {
   }
 
   handleSaveActivity = () => {
-    const urlPost = "https://running-app-be-0.vercel.app/api/activities/post";
+    const urlPost =
+      "https://running-app-be-0-git-main-voquocminh1209.vercel.app/api/activities/post";
 
     const act = {
       userID: this.state.userID,
@@ -112,7 +113,7 @@ export default class SaveActivityScreen extends React.Component {
       this.setState({ userID: vl._id });
 
       Axios.get(
-        `https://running-app-be-0.vercel.app/api/users/getInfo/${vl._id}`
+        `https://running-app-be-0-git-main-voquocminh1209.vercel.app/api/users/getInfo/${vl._id}`
       )
         .then((res) => {
           if (

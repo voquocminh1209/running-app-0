@@ -62,7 +62,8 @@ function NutritionTab({ navigation }) {
   const [info, setInfo] = useState({});
   const [isTested, setIsTested] = useState(false);
   const [listType, setListType] = useState([]);
-  let postApi = "https://running-app-be-0.vercel.app/api/food/foodtype";
+  let postApi =
+    "https://running-app-be-0-git-main-voquocminh1209.vercel.app/api/food/foodtype";
 
   const checkNullUndefined = (data) => {
     if (data === undefined || data === null || data === "") return false;
@@ -84,7 +85,7 @@ function NutritionTab({ navigation }) {
       var vl = jwt_decode(token);
       console.log("Token decode", vl._id);
       Axios.get(
-        `https://running-app-be-0.vercel.app/api/users/getInfo/${vl._id}`
+        `https://running-app-be-0-git-main-voquocminh1209.vercel.app/api/users/getInfo/${vl._id}`
       )
         .then((res) => {
           setInfo(res.data);
@@ -118,20 +119,23 @@ function NutritionTab({ navigation }) {
       //console.log('height:',height)
       //console.log('weight',weight)
 
-      await Axios.post("https://running-app-be-0.vercel.app/api/users/Infov2", {
-        UserID: info.user,
-        fullname: info.fullname,
-        address: info.address,
-        birthday: info.birthday,
-        description: info.description,
-        gender: info.gender,
-        height: info.height,
-        weight: info.weight,
-        job: info.job,
-        phone: info.phone,
-        note: calo,
-        image: info.image,
-      })
+      await Axios.post(
+        "https://running-app-be-0-git-main-voquocminh1209.vercel.app/api/users/Infov2",
+        {
+          UserID: info.user,
+          fullname: info.fullname,
+          address: info.address,
+          birthday: info.birthday,
+          description: info.description,
+          gender: info.gender,
+          height: info.height,
+          weight: info.weight,
+          job: info.job,
+          phone: info.phone,
+          note: calo,
+          image: info.image,
+        }
+      )
         .then((res) => {})
         .catch((err) => {
           console.log(err);
