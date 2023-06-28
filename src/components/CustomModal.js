@@ -21,7 +21,7 @@ const ButtonSheetModal = ({ info, setInfo, modalVisible, setModalVisible }) => {
     setInfo({ ...info, [fieldName]: value });
 
   const CLOUDINARY_URL = "https://api.cloudinary.com/v1_1/dbjh8ovbv/upload";
-  const CLOUDINARY_UPLOAD_PRESET = "ml_default";
+  const CLOUDINARY_UPLOAD_PRESET = "t8je7ppl";
 
   const uploadHandle = (pickerResult) => {
     let base64Img = `data:image/jpg;base64,${pickerResult.base64}`;
