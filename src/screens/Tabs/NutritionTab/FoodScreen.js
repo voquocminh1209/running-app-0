@@ -47,10 +47,9 @@ function FoodScreen({ navigation }) {
           height: windowHeight / 10,
           backgroundColor: Constants.COLOR.green,
           flexDirection: "row",
-          alignItems: "center",
-          paddingHorizontal: 2,
-          paddingVertical: 4,
           paddingTop: windowHeight / 26,
+          justifyContent: 'space-between',
+          paddingHorizontal: 10
         }}
       >
         <CustomButton
@@ -74,6 +73,7 @@ function FoodScreen({ navigation }) {
             {navigation.getParam("name")}
           </Text>
         </FontLoader>
+        <View style={{ width: 40 }} />
       </View>
       {/* show list food */}
       <SafeAreaView
@@ -109,7 +109,7 @@ function FoodScreen({ navigation }) {
                   style={{
                     fontFamily: "SemiBold",
                     fontSize: 22,
-                    color: Constants.COLOR.dark_green,
+                    color: Constants.COLOR.green,
                   }}
                 >
                   Recommended:

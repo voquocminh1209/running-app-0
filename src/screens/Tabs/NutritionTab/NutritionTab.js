@@ -25,30 +25,23 @@ const windowWidth = Dimensions.get("window").width;
 
 var datas = [
   {
-    imageUrl:
-      "https://firebasestorage.googleapis.com/v0/b/chatappflutter-b38e5.appspot.com/o/us-news-world-report-best-worst-diets-2021-1440x810.jpg?alt=media&token=d2c78279-bfd4-43d5-ae1d-6776baba7490",
-    name: "Vegetables",
-    type: "vegetables",
+      _id:'1',
+      image: "https://parade.com/.image/ar_16:9%2Cc_fill%2Ccs_srgb%2Cfl_progressive%2Cq_auto:good%2Cw_1200/MTkwNTgxMzY3MTIzMjIzNjc3/healthiest-vegetables-jpg.jpg",
+      typeName: "Vegetables",
+      type: "vegetables",
   },
   {
-    imageUrl:
-      "https://firebasestorage.googleapis.com/v0/b/chatappflutter-b38e5.appspot.com/o/us-news-world-report-best-worst-diets-2021-1440x810.jpg?alt=media&token=d2c78279-bfd4-43d5-ae1d-6776baba7490",
-    name: "Fruits",
-    type: "fruits",
+      _id:'2',
+      image: "https://hips.hearstapps.com/hmg-prod/images/assortment-of-colorful-ripe-tropical-fruits-top-royalty-free-image-995518546-1564092355.jpg",
+      typeName: "Fruits",
+      type: "fruits",
   },
-  {
-    imageUrl:
-      "https://firebasestorage.googleapis.com/v0/b/chatappflutter-b38e5.appspot.com/o/us-news-world-report-best-worst-diets-2021-1440x810.jpg?alt=media&token=d2c78279-bfd4-43d5-ae1d-6776baba7490",
-    name: "Animal Origin",
-    type: "animalOrigin",
+  {   _id:'3',
+      image: "https://www.vinamilk.com.vn/static/uploads/editor/article%20img/shutterstock_603582332a.jpg",
+      typeName: "Animal Origin",
+      type: "animalOrigin",
   },
-  {
-    imageUrl:
-      "https://firebasestorage.googleapis.com/v0/b/chatappflutter-b38e5.appspot.com/o/us-news-world-report-best-worst-diets-2021-1440x810.jpg?alt=media&token=d2c78279-bfd4-43d5-ae1d-6776baba7490",
-    name: "Animal",
-    type: "animal",
-  },
-];
+]
 
 function NutritionTab({ navigation }) {
   const [modalVisible, setModalVisible] = useState(false);
@@ -195,86 +188,83 @@ function NutritionTab({ navigation }) {
                 textAlign: "center",
               }}
             >
-              Nutrition
+              NUTRITION
             </Text>
           </FontLoader>
         </View>
       </View>
       <View
         style={{
-          flexDirection: "row",
-          justifyContent: "center",
-          paddingTop: 4,
+          flexDirection: 'row',
+                justifyContent: 'center',
+                marginTop: 10,
+                borderRadius: 50,
+                margin: 10,
+                backgroundColor: Constants.COLOR.green,
+                shadowColor: '#000000',
+                shadowOffset: {
+                    width: 0,
+                    height: 3
+                },
+                shadowRadius: 7,
+                shadowOpacity: 1.0,
+                elevation: 5,
         }}
       >
         {/* left */}
-        <View
-          style={{
-            height: windowHeight / 8,
-            width: windowWidth / 3,
-            alignSelf: "center",
-            alignItems: "center",
-            justifyContent: "center",
-            backgroundColor: Constants.COLOR.green,
-            borderTopLeftRadius: 15,
-            borderBottomLeftRadius: 15,
-            elevation: 7,
-          }}
-        >
-          <FontLoader>
-            <Text
-              style={{
-                fontFamily: "RobotoRegular",
-                fontSize: windowHeight / 36,
-                color: Constants.COLOR.white,
-                textAlignVertical: "center",
-                textAlign: "center",
-              }}
-            >
-              Daily calorie intake
-            </Text>
-          </FontLoader>
-        </View>
-        <View style={{ width: 2 }}></View>
-        {/* main */}
-        <View
-          style={{
-            height: windowHeight / 8,
-            width: windowWidth / 2 + windowWidth / 10,
-            backgroundColor: Constants.COLOR.white,
-            alignItems: "center",
-            justifyContent: "center",
-            borderRadius: 15,
-            elevation: 7,
-          }}
-        >
-          <FontLoader>
-            <Text
-              numberOfLines={1}
-              ellipsizeMode="tail"
-              style={{
-                fontFamily: "RobotoRegular",
-                fontSize: windowHeight / 24,
-                color: Constants.COLOR.dark_green,
-                paddingHorizontal: 8,
-                textAlignVertical: "center",
-              }}
-            >
-              ~ {calorie}
-            </Text>
-            <Text
-              style={{
-                fontFamily: "RobotoRegular",
-                fontSize: windowHeight / 40,
-                color: Constants.COLOR.second_green,
-                paddingHorizontal: 12,
-              }}
-            >
-              Calories
-            </Text>
-          </FontLoader>
-        </View>
-      </View>
+        <View style={{
+                    height: windowHeight / 8,
+                    width: '40%',
+                    alignSelf: 'center',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    backgroundColor: Constants.COLOR.green,
+                    borderRadius: 50,
+                    paddingHorizontal: 5
+                }}>
+                    <FontLoader>
+                        <Text style={{
+                            fontFamily: 'RobotoRegular',
+                            fontSize: windowHeight / 36,
+                            color: Constants.COLOR.white,
+                            textAlignVertical: 'center',
+                            textAlign: 'center'
+                        }}>
+                            Daily calorie intake
+                        </Text>
+                    </FontLoader>
+                </View>
+                {/* main */}
+                <View style={{
+                    height: windowHeight / 8,
+                    width: '60%',
+                    backgroundColor: Constants.COLOR.white,
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    borderRadius: 50
+                }}>
+                    <FontLoader>
+                        <Text numberOfLines={1} ellipsizeMode="tail"
+                            style={{
+                                fontFamily: 'RobotoRegular',
+                                fontSize: windowHeight / 24,
+                                color: Constants.COLOR.green,
+                                paddingHorizontal: 8,
+                                textAlignVertical: 'center'
+                            }}>
+                            ~ {calorie}
+                        </Text>
+                        <Text style={{
+                            fontFamily: 'RobotoRegular',
+                            fontSize: windowHeight / 40,
+                            color: Constants.COLOR.blacksecondary,
+                            paddingHorizontal: 5,
+                        }}>
+                            Calories
+                        </Text>
+                    </FontLoader>
+                </View>
+            </View>
       {/* test */}
       {!isTested ? (
         isInfoUserLoading ? (
@@ -317,7 +307,7 @@ function NutritionTab({ navigation }) {
                 style={{
                   fontFamily: "RobotoRegular",
                   fontSize: windowHeight / 40,
-                  color: Constants.COLOR.second_green,
+                  color: Constants.COLOR.black,
                   paddingHorizontal: 8,
                 }}
               >
@@ -350,7 +340,7 @@ function NutritionTab({ navigation }) {
                 style={{
                   fontFamily: "SemiBold",
                   fontSize: windowHeight / 30,
-                  color: Constants.COLOR.dark_green,
+                  color: Constants.COLOR.green,
                 }}
               >
                 Food Categories
@@ -375,7 +365,7 @@ function NutritionTab({ navigation }) {
               style={{
                 fontFamily: "RobotoRegular",
                 fontSize: windowHeight / 40,
-                color: Constants.COLOR.second_green,
+                color: Constants.COLOR.black,
                 paddingHorizontal: 8,
               }}
             >
@@ -427,7 +417,7 @@ function NutritionTab({ navigation }) {
                 );
               }}
               contentContainerStyle={{
-                paddingBottom: 20,
+                paddingBottom: 65,
               }}
             />
           </View>

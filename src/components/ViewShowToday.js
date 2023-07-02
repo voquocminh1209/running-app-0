@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import {SafeAreaView, Text, View, ScrollView, Dimensions, StyleSheet, TouchableOpacity} from 'react-native';
 import { StatusBar } from 'expo-status-bar';
-
+import Constants from '../utilities/Constants';
 import moment from 'moment';
 
 const windowHeight = Dimensions.get('window').height;
@@ -104,7 +104,7 @@ const styles=StyleSheet.create({
     blockData:{
         width: windowWidth*0.4,
         height:windowWidth*0.3,
-        backgroundColor: "#4CD964",
+        backgroundColor: Constants.COLOR.second_green,
         borderRadius:20,
         paddingTop:20,
         alignItems:'center',

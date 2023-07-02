@@ -16,7 +16,7 @@ import FontLoader from "../../../utilities/Font";
 import PlanRecommendedCard from "../../../components/PlanRecommendedCard";
 import ListPlanCard from "../../../components/ListPlanCard";
 import Axios from "axios";
-
+import { FontAwesome5 } from "@expo/vector-icons";
 const windowHeight = Dimensions.get("window").height;
 const windowWidth = Dimensions.get("window").width;
 
@@ -58,7 +58,7 @@ function PlansTab({ navigation }) {
       if (curWebUrl !== null) {
         setCurWebUrl(curWebUrl);
       }
-    } catch (error) {}
+    } catch (error) { }
   };
 
   useEffect(() => {
@@ -112,7 +112,7 @@ function PlansTab({ navigation }) {
                 textAlign: "center",
               }}
             >
-              All Plans
+              ALL PLANS
             </Text>
           </FontLoader>
         </View>
@@ -140,8 +140,16 @@ function PlansTab({ navigation }) {
                   paddingHorizontal: 8,
                   backgroundColor: Constants.COLOR.green,
                   borderRadius: 12,
+                  flexDirection:'row',
+                  justifyContent:'center',
+                  alignItems:'center'
                 }}
               >
+                 <FontAwesome5
+              name="bolt"
+              size={windowHeight / 30}
+              color={'#F24C3D'}
+            />
                 <FontLoader>
                   <Text
                     numberOfLines={1}
@@ -150,6 +158,7 @@ function PlansTab({ navigation }) {
                       fontFamily: "SemiBold",
                       fontSize: windowHeight / 30,
                       color: Constants.COLOR.white,
+                      paddingLeft:5
                     }}
                   >
                     Current Plan

@@ -21,7 +21,7 @@ import MapView, { Marker, Polyline, PROVIDER_GOOGLE } from "react-native-maps";
 import { StackActions, NavigationActions } from "react-navigation";
 import Axios from "axios";
 import jwt_decode from "jwt-decode";
-
+import Constants from "../../../utilities/Constants";
 const windowWidth = Dimensions.get("window").width;
 const LEVEL = ["Easy", "Normal", "Difficult", "Hard", "Extreme", "Insane"];
 
@@ -35,7 +35,7 @@ export default class SaveActivityScreen extends React.Component {
     title: "Save Activity",
     headerTintColor: "white",
     headerStyle: {
-      backgroundColor: "green",
+      backgroundColor: Constants.COLOR.green,
     },
   };
 
@@ -279,7 +279,7 @@ export default class SaveActivityScreen extends React.Component {
     return isDataUserLoading ? (
       isValidWeight ? (
         <View style={{ flex: 1, justifyContent: "center" }}>
-          <ActivityIndicator size={50} color="green" />
+          <ActivityIndicator size={50} color={Constants.COLOR.green} />
         </View>
       ) : (
         <View
@@ -297,7 +297,7 @@ export default class SaveActivityScreen extends React.Component {
             style={[
               styles.button,
               {
-                backgroundColor: "green",
+                backgroundColor: Constants.COLOR.green,
                 marginVertical: 10,
               },
             ]}
@@ -336,8 +336,8 @@ export default class SaveActivityScreen extends React.Component {
 
         <Text
           style={{
-            color: "green",
-            fontSize: 120,
+            color: Constants.COLOR.green,
+            fontSize: 70,
             marginTop: 5,
             fontWeight: "300",
           }}
@@ -358,7 +358,7 @@ export default class SaveActivityScreen extends React.Component {
 
         <View style={styles.containerRecord}>
           <View style={styles.itemRecord}>
-            <MaterialCommunityIcons name="run-fast" size={24} color="green" />
+            <MaterialCommunityIcons name="run-fast" size={24} color={Constants.COLOR.green} />
 
             <Text style={styles.itemContent}>{this.state.distance}</Text>
 
@@ -376,7 +376,7 @@ export default class SaveActivityScreen extends React.Component {
               },
             ]}
           >
-            <MaterialIcons name="timer" size={24} color="green" />
+            <MaterialIcons name="timer" size={24} color={Constants.COLOR.green} />
 
             <Text style={styles.itemContent}>{this.state.time}</Text>
 
@@ -387,7 +387,7 @@ export default class SaveActivityScreen extends React.Component {
             <MaterialCommunityIcons
               name="speedometer"
               size={24}
-              color="green"
+              color={Constants.COLOR.green}
             />
 
             <Text style={styles.itemContent}>{this.state.avgPace}</Text>
@@ -413,7 +413,7 @@ export default class SaveActivityScreen extends React.Component {
                 key={index}
                 coordinates={route}
                 strokeWidth={6}
-                strokeColor="green"
+                strokeColor={Constants.COLOR.green}
               />
             );
           })}
@@ -444,7 +444,7 @@ export default class SaveActivityScreen extends React.Component {
 
         <Text
           style={{
-            color: "green",
+            color: Constants.COLOR.green,
             fontSize: 24,
           }}
         >
@@ -457,7 +457,7 @@ export default class SaveActivityScreen extends React.Component {
           maximumValue={5}
           step={1}
           minimumTrackTintColor={"lime"}
-          thumbTintColor={"green"}
+          thumbTintColor={Constants.COLOR.green}
           value={this.state.level}
           onValueChange={(value) => this.setState({ level: value })}
         />
@@ -468,13 +468,13 @@ export default class SaveActivityScreen extends React.Component {
               styles.button,
               {
                 backgroundColor: "white",
-                borderColor: "green",
+                borderColor: Constants.COLOR.green,
                 borderWidth: 1.5,
               },
             ]}
             onPress={this.onPress_btnDiscard}
           >
-            <Text style={[styles.buttonTitle, { color: "green" }]}>
+            <Text style={[styles.buttonTitle, { color: Constants.COLOR.green }]}>
               DISCARD
             </Text>
           </TouchableOpacity>
@@ -483,7 +483,7 @@ export default class SaveActivityScreen extends React.Component {
             style={[
               styles.button,
               {
-                backgroundColor: "green",
+                backgroundColor: Constants.COLOR.green,
               },
             ]}
             onPress={this.onPress_btnSave}

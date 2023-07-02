@@ -211,13 +211,13 @@ const styles = StyleSheet.create({
   title: {
     fontSize: windowHeight / 32,
     paddingLeft: 4,
-    color: Constants.COLOR.dark_green,
+    color: Constants.COLOR.second_green,
     fontFamily: "SemiRegular",
   },
   label: {
     fontSize: windowHeight / 36,
     paddingLeft: 8,
-    color: Constants.COLOR.dark_green,
+    color: Constants.COLOR.second_green,
     fontFamily: "SemiRegular",
   },
   text: {

@@ -8,13 +8,11 @@ import { FontAwesome5, FontAwesome, MaterialIcons, Entypo } from '@expo/vector-i
 import {Picker} from '@react-native-picker/picker';
 import * as Location from 'expo-location';
 import * as TaskManager from 'expo-task-manager';
-
 import { EventEmitter } from 'fbemitter';
 import Constants from "../../../utilities/Constants";
-
+import * as Permissions from 'expo-permissions';
 const STORAGE_KEY = 'expo-home-locations';
 const LOCATION_UPDATES_TASK = 'background-location-task';
-
 const LATITUDE_DELTA = 0.001;
 const LONGTITUDE_DELTA = 0.001;
 
@@ -22,7 +20,7 @@ const locationEventsEmitter = new EventEmitter();
 
 export default class GeofenceTab extends React.Component {
   static navigationOptions = {
-    title: 'Activity',
+    title: 'ACTIVITY',
     headerLeft: () => null,
     headerTintColor: Constants.COLOR.white,
     headerStyle: {
@@ -32,7 +30,7 @@ export default class GeofenceTab extends React.Component {
       alignSelf: 'center',
     },
   };
-
+ 
   constructor(props) {
     super(props);
     
@@ -343,14 +341,14 @@ export default class GeofenceTab extends React.Component {
   }
 
   // Render
-
+  
   renderButton() {
     const { statement } = this.state;
     switch (statement) {
       case "isNotActive":
         return (
           <TouchableOpacity
-            style={[styles.button, { backgroundColor: "green" }]}
+            style={[styles.button, { backgroundColor: Constants.COLOR.green }]}
             onPress={this.onPress_btnStart}>
             <Text style={styles.buttonTitle}>
               START
@@ -360,7 +358,7 @@ export default class GeofenceTab extends React.Component {
       case "isActive":
         return (
           <TouchableOpacity
-            style={[styles.button, { backgroundColor: "green" }]}
+            style={[styles.button, { backgroundColor: Constants.COLOR.green }]}
             onPress={this.onPress_btnPause}>
             <Text style={styles.buttonTitle}>
               PAUSE
@@ -373,17 +371,17 @@ export default class GeofenceTab extends React.Component {
             <TouchableOpacity
               style={[styles.button, {
                 backgroundColor: "white",
-                borderColor: "green",
+                borderColor: Constants.COLOR.green,
                 borderWidth: 1,
               }]}
               onPress={this.onPress_btnResume}>
-              <Text style={[styles.buttonTitle, { color: "green" }]}>
+              <Text style={[styles.buttonTitle, { color:Constants.COLOR.green }]}>
                 RESUME
               </Text>
             </TouchableOpacity>
 
             <TouchableOpacity
-              style={[styles.button, { backgroundColor: "green" }]}
+              style={[styles.button, { backgroundColor: Constants.COLOR.green }]}
               onPress={this.onPress_btnFinish}>
               <Text style={styles.buttonTitle}>
                 FINISH
@@ -403,7 +401,15 @@ export default class GeofenceTab extends React.Component {
     if (!this.state.region) {
       return <NavigationEvents onDidFocus={this.didFocus} />;
     }
-
+   /*  const checkLocationPermission = async()=> {
+      const { status } = await Permissions.askAsync(Permissions.LOCATION_BACKGROUND);
+    
+      if (status !== 'granted') {
+        console.log('Ứng dụng chưa được ủy quyền sử dụng dịch vụ vị trí.');
+        return;
+      }
+    }
+    checkLocationPermission(); */
     return (
       <View style={styles.container}>
         <View style={styles.containerMap}>
@@ -446,7 +452,7 @@ export default class GeofenceTab extends React.Component {
           }
         </View>  
 
-        <View style={{width: '100%', backgroundColor: 'green'}}>
+        <View style={{width: '100%', backgroundColor: Constants.COLOR.green}}>
           <Picker
           mode={'dropdown'}
           style={{width:'100%', height: 40, backgroundColor: 'transparent', color: 'white'}}
@@ -462,7 +468,7 @@ export default class GeofenceTab extends React.Component {
             style={[styles.button,
             {
               borderWidth: 1,
-              borderColor: 'green',
+              borderColor: Constants.COLOR.green,
               backgroundColor: 'white',
               width: 40,
               height: 40,
@@ -470,9 +476,9 @@ export default class GeofenceTab extends React.Component {
             onPress={this.onPress_btnShowRecordBox}>
             {
               this.state.showRecordBox ? (
-                <Entypo name="eye-with-line" size={20} color="green" />
+                <Entypo name="eye-with-line" size={20} color={Constants.COLOR.green} />
               ) : (
-                <Entypo name="eye" size={20} color="green" />
+                <Entypo name="eye" size={20} color={Constants.COLOR.green} />
               )
             }
           </TouchableOpacity>
@@ -482,7 +488,7 @@ export default class GeofenceTab extends React.Component {
           <TouchableOpacity
             style={[styles.button,
             {
-              backgroundColor: "green",
+              backgroundColor: Constants.COLOR.green,
               width: 40,
               height: 40,
             }]}
@@ -513,7 +519,7 @@ const Map = React.memo(props => {
               key={index}
               coordinates={route}
               strokeWidth={6}
-              strokeColor='green' />
+              strokeColor={Constants.COLOR.green} />
           )
         })
       }
@@ -521,7 +527,7 @@ const Map = React.memo(props => {
       <Polyline
         coordinates={props.currentRoute}
         strokeWidth={6}
-        strokeColor='green' />
+        strokeColor={Constants.COLOR.green} />
 
       {
         props.markerOnRoute.map((marker, index) => {
@@ -617,7 +623,7 @@ const styles = StyleSheet.create({
     justifyContent: 'space-evenly',
     paddingVertical: 10,
     backgroundColor: "white",
-    borderTopColor: "green",
+    borderTopColor: Constants.COLOR.green,
     borderTopWidth: 1,
   },
   recordBox:

@@ -167,7 +167,7 @@ function EditScreen({ navigation }) {
                 fontFamily: "SemiBold",
                 fontSize: windowHeight / 30,
                 paddingHorizontal: 12,
-                color: Constants.COLOR.dark_green,
+                color: Constants.COLOR.green,
               }}
             >
               Edit Profile
@@ -281,7 +281,7 @@ const styles = StyleSheet.create({
   header: {
     fontSize: windowHeight / 26,
     padding: 4,
-    color: Constants.COLOR.dark_green,
+    color: Constants.COLOR.green,
     fontFamily: "SemiBold",
   },
 });

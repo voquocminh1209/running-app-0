@@ -30,18 +30,14 @@ const ListPlanCard = ({title, datas, navigation}) => {
             }}>
                 <View style={{
                     alignSelf: 'center',
-                    padding: 4,
-                    paddingHorizontal: 8,
-                    backgroundColor: Constants.COLOR.green,
-                    borderRadius: 12,
-                    elevation: 6
+
                 }}>
                     <FontLoader>
                         <Text numberOfLines={1} ellipsizeMode="tail"
                         style={{
                             fontFamily: 'SemiBold',
                             fontSize: windowHeight/30,
-                            color: Constants.COLOR.white,
+                            color: Constants.COLOR.green,
                             paddingHorizontal: 12, 
                         }}>
                             {title}

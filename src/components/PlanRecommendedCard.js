@@ -42,7 +42,7 @@ const PlanRecommendedCard = ({image, tittle, onPress, imageHeight=windowHeight/5
                         style={{
                             fontSize: windowHeight/36,
                             fontFamily: 'SemiBold',
-                            color: Constants.COLOR.dark_green,
+                            color: Constants.COLOR.black,
                             paddingHorizontal: 8,
                             textAlignVertical: 'top',
                             textAlign: 'center',

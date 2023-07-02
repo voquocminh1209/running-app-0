@@ -10,7 +10,7 @@ import {
     StackedBarChart
   } from "react-native-chart-kit";
 import moment from 'moment';
-
+import Constants from '../utilities/Constants';
 const windowHeight = Dimensions.get('window').height;
 const windowWidth = Dimensions.get('window').width;
 
@@ -153,8 +153,8 @@ function ViewShowChart({dataMon, dataTue, dataWed, dataThu, dataFri, dataSat, da
                                 backgroundGradientFrom: "#f0f0f0",
                                 backgroundGradientTo: "#FaFaFa",
                                 decimalPlaces: 0, // làm chữ số thập phân
-                                color: (opacity = 1) => `rgba(76, 217, 100, ${opacity})`,
-                                labelColor: (opacity = 1) => `rgba(0, 0, 0, ${opacity})`,
+                                color: (opacity = 1) => Constants.COLOR.second_green,
+                                labelColor: (opacity = 1) => Constants.COLOR.green,
                             style: {
                                 borderRadius: 15
                             },
@@ -177,7 +177,7 @@ function ViewShowChart({dataMon, dataTue, dataWed, dataThu, dataFri, dataSat, da
                     marginHorizontal:15, 
                     borderWidth:2, 
                     borderRadius:22, 
-                    borderColor:"#4CD964",
+                    borderColor:Constants.COLOR.green,
                     paddingHorizontal:0
 
                     }}>
@@ -234,7 +234,7 @@ const styles=StyleSheet.create({
         fontSize:15,
     },
     btnTabActive:{
-        backgroundColor: "#4CD964",
+        backgroundColor: Constants.COLOR.second_green,
         position:'relative'
     },
     textTabActive:{

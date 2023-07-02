@@ -244,7 +244,7 @@ const TestRModal = ({
             backgroundColor: Constants.COLOR.white,
             borderRadius: 15,
             borderWidth: 2,
-            borderColor: Constants.COLOR.second_green,
+            borderColor: Constants.COLOR.green,
           }}
         >
           {infoValid() ? (
@@ -259,7 +259,7 @@ const TestRModal = ({
                   style={{
                     fontFamily: "SemiBold",
                     fontSize: windowHeight / 28,
-                    color: Constants.COLOR.dark_green,
+                    color: Constants.COLOR.green,
                     paddingHorizontal: 12,
                   }}
                 >
@@ -269,7 +269,7 @@ const TestRModal = ({
                   style={{
                     fontFamily: "RobotoRegular",
                     fontSize: windowHeight / 36,
-                    color: Constants.COLOR.second_green,
+                    color: Constants.COLOR.green,
                     paddingHorizontal: 12,
                     padding: windowHeight / 100,
                   }}
@@ -393,14 +393,14 @@ const styles = StyleSheet.create({
     fontFamily: "SemiBold",
     fontSize: windowHeight / 34,
     paddingHorizontal: 32,
-    color: Constants.COLOR.dark_green,
+    color: Constants.COLOR.green,
     textAlign: "center",
   },
   subText: {
     fontFamily: "SemiRegular",
     fontSize: windowHeight / 42,
     paddingHorizontal: 32,
-    color: Constants.COLOR.dark_green,
+    color: Constants.COLOR.green,
     textAlign: "center",
   },
 });

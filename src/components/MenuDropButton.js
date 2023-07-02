@@ -62,7 +62,7 @@ const MenuDropdownButton = ({setMenuRef, hideMenu, showMenu,
                     textStyle={{
                         fontFamily: "RobotoRegular",
                         fontSize: windowHeight/42,
-                        color: Constants.COLOR.dark_green,
+                        color: Constants.COLOR.second_green,
                     }}>
                         Change password
                     </MenuItem>
@@ -75,7 +75,7 @@ const MenuDropdownButton = ({setMenuRef, hideMenu, showMenu,
                     textStyle={{
                         fontFamily: "RobotoRegular",
                         fontSize: windowHeight/42,
-                        color: Constants.COLOR.dark_green,
+                        color: Constants.COLOR.second_green,
                     }}>
                         Report Error
                     </MenuItem>
@@ -88,7 +88,7 @@ const MenuDropdownButton = ({setMenuRef, hideMenu, showMenu,
                     textStyle={{
                         fontFamily: "RobotoRegular",
                         fontSize: windowHeight/42,
-                        color: Constants.COLOR.dark_green,
+                        color: Constants.COLOR.second_green,
                     }}>
                         Logout
                     </MenuItem>

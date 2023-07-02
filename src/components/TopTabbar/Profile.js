@@ -359,19 +359,19 @@ const styles = StyleSheet.create({
   title: {
     fontSize: windowHeight / 32,
     paddingLeft: 4,
-    color: Constants.COLOR.dark_green,
+    color: Constants.COLOR.black,
     fontFamily: "SemiRegular",
   },
   label: {
     fontSize: windowHeight / 38,
     paddingLeft: 8,
-    color: Constants.COLOR.dark_green,
+    color: Constants.COLOR.black,
     fontFamily: "SemiRegular",
   },
   text: {
     fontSize: windowHeight / 38,
     paddingLeft: 8,
-    color: Constants.COLOR.second_green,
+    color: Constants.COLOR.black,
     fontFamily: "SemiRegular",
   },
 });

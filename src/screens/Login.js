@@ -73,10 +73,6 @@ function Login({ navigation }) {
     </View>
   ) : (
     <View>
-      <Image
-        source={require("../images/background2.png")}
-        style={{ height: "35%", width: "100%" }}
-      ></Image>
       <KeyboardAvoidingView
         style={{
           position: "absolute",
@@ -98,9 +94,10 @@ function Login({ navigation }) {
       <View
         style={{
           backgroundColor: Constants.COLOR.green,
-          height: "65%",
+          height: "100%",
           width: "100%",
           alignSelf: "center",
+          justifyContent:'center'
         }}
       >
         <KeyboardAvoidingView>

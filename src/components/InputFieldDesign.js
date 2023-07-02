@@ -256,20 +256,20 @@ const styles = StyleSheet.create({
     header: {
         fontSize: windowHeight/26,
         padding: 4,
-        color: Constants.COLOR.dark_green,
+        color: Constants.COLOR.green,
         fontFamily: 'SemiBold'
     },
     title: {
         fontSize: windowHeight/36,
         paddingTop: 2,
         paddingLeft: 8,
-        color: Constants.COLOR.dark_green,
+        color: Constants.COLOR.second_green,
         fontFamily: 'SemiRegular'
     },
     text: {
         fontSize: windowHeight/36,
         paddingLeft: 8,
-        color: Constants.COLOR.second_green,
+        color: Constants.COLOR.black,
         fontFamily: 'SemiRegular',
         textAlignVertical: 'top',
     },
