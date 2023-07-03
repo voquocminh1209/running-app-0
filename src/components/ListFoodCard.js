@@ -25,7 +25,7 @@ const FoodCard = ({ urlImage, name, calories, onPress }) => {
     <TouchableOpacity
       onPress={onPress}
       style={{
-        height: h / 5 + 10,
+        height: h / 5 + 25,
         width: w / 2 - 10,
         backgroundColor: Constants.COLOR.white,
         margin: 5,
@@ -136,7 +136,7 @@ const ListFoodCard = ({ data, type }) => {
     <SafeAreaView>
       <Modal
         transparent={true}
-        animationType="fade"
+        animationType="slide"
         visible={modalVisible}
         onRequestClose={() => {
           setModalVisible(!modalVisible);
@@ -148,7 +148,7 @@ const ListFoodCard = ({ data, type }) => {
             backgroundColor: Constants.COLOR.white,
             flex: 1,
             margin: 20,
-            borderRadius: 40,
+            borderRadius: 10,
             borderColor: Constants.COLOR.green,
             borderWidth: 2,
             marginVertical:100
@@ -156,8 +156,8 @@ const ListFoodCard = ({ data, type }) => {
         >
           <View
             style={{
-              height: "40%",
-              width: windowWidth - 48,
+              height: "35%",
+              width:'100%',
             }}
           >
             <Image
@@ -167,9 +167,9 @@ const ListFoodCard = ({ data, type }) => {
               style={{
                 height: "100%",
                 width: "100%",
-                justifyContent: "flex-start",
-                resizeMode:'contain',
-                borderRadius:50
+                resizeMode:'stretch',
+                borderTopLeftRadius:10,
+                borderTopRightRadius:10
               }}
             ></Image>
           </View>
