@@ -456,7 +456,7 @@ export default class SaveActivityScreen extends React.Component {
           minimumValue={0}
           maximumValue={5}
           step={1}
-          minimumTrackTintColor={"lime"}
+          minimumTrackTintColor={"#30A2FF"}
           thumbTintColor={Constants.COLOR.green}
           value={this.state.level}
           onValueChange={(value) => this.setState({ level: value })}

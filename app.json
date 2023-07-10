@@ -3,15 +3,13 @@
     "plugins": [
       ["expo-location", { "isAndroidBackgroundLocationEnabled": true } ]
     ],
-    "name": "Run For Your Life",
-    "slug": "runforyourlife",
+    "name": "Running app",
+    "slug": "runningapp",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/logo.png",
+    "icon": "./assets/icon.png",
     "splash": {
-      "image": "./assets/logo.png",
-      "resizeMode": "contain",
-      "backgroundColor": "#22B14C"
+      "backgroundColor": "#30A2FF"
     },
     "updates": {
       "fallbackToCacheTimeout": 0
@@ -20,7 +18,7 @@
       "**/*"
     ],
     "ios": {
-      "bundleIdentifier": "com.devTeam.runforyourlife",
+      "bundleIdentifier": "com.devTeam.runningapp",
       "buildNumber": "1.0.0"
     },
     "android": {
@@ -33,7 +31,7 @@
         "ACCESS_COARSE_LOCATION",
         "ACCESS_FINE_LOCATION"
       ],
-      "package": "com.devTeam.runforyourlife",
+      "package": "com.devTeam.runningapp",
       "versionCode": 1
     },
     "web": {

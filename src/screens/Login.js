@@ -166,7 +166,7 @@ function Login({ navigation }) {
               style={{
                 fontSize: 22,
                 fontFamily: "SemiRegular",
-                color: Constants.COLOR.red,
+                color: Constants.COLOR.white,
               }}
             >
               Sign up now!{" "}
