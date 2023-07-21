@@ -58,7 +58,7 @@ function PlansTab({ navigation }) {
       if (curWebUrl !== null) {
         setCurWebUrl(curWebUrl);
       }
-    } catch (error) { }
+    } catch (error) {}
   };
 
   useEffect(() => {
@@ -140,16 +140,16 @@ function PlansTab({ navigation }) {
                   paddingHorizontal: 8,
                   backgroundColor: Constants.COLOR.green,
                   borderRadius: 12,
-                  flexDirection:'row',
-                  justifyContent:'center',
-                  alignItems:'center'
+                  flexDirection: "row",
+                  justifyContent: "center",
+                  alignItems: "center",
                 }}
               >
-                 <FontAwesome5
-              name="bolt"
-              size={windowHeight / 30}
-              color={'#F24C3D'}
-            />
+                <FontAwesome5
+                  name="bolt"
+                  size={windowHeight / 30}
+                  color={"#F24C3D"}
+                />
                 <FontLoader>
                   <Text
                     numberOfLines={1}
@@ -158,7 +158,7 @@ function PlansTab({ navigation }) {
                       fontFamily: "SemiBold",
                       fontSize: windowHeight / 30,
                       color: Constants.COLOR.white,
-                      paddingLeft:5
+                      paddingLeft: 5,
                     }}
                   >
                     Current Plan

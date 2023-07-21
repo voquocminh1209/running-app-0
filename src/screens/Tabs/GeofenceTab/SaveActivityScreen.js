@@ -358,7 +358,11 @@ export default class SaveActivityScreen extends React.Component {
 
         <View style={styles.containerRecord}>
           <View style={styles.itemRecord}>
-            <MaterialCommunityIcons name="run-fast" size={24} color={Constants.COLOR.green} />
+            <MaterialCommunityIcons
+              name="run-fast"
+              size={24}
+              color={Constants.COLOR.green}
+            />
 
             <Text style={styles.itemContent}>{this.state.distance}</Text>
 
@@ -376,7 +380,11 @@ export default class SaveActivityScreen extends React.Component {
               },
             ]}
           >
-            <MaterialIcons name="timer" size={24} color={Constants.COLOR.green} />
+            <MaterialIcons
+              name="timer"
+              size={24}
+              color={Constants.COLOR.green}
+            />
 
             <Text style={styles.itemContent}>{this.state.time}</Text>
 
@@ -474,7 +482,9 @@ export default class SaveActivityScreen extends React.Component {
             ]}
             onPress={this.onPress_btnDiscard}
           >
-            <Text style={[styles.buttonTitle, { color: Constants.COLOR.green }]}>
+            <Text
+              style={[styles.buttonTitle, { color: Constants.COLOR.green }]}
+            >
               DISCARD
             </Text>
           </TouchableOpacity>

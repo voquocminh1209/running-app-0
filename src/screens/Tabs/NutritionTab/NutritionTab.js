@@ -25,23 +25,27 @@ const windowWidth = Dimensions.get("window").width;
 
 var datas = [
   {
-      _id:'1',
-      image: "https://parade.com/.image/ar_16:9%2Cc_fill%2Ccs_srgb%2Cfl_progressive%2Cq_auto:good%2Cw_1200/MTkwNTgxMzY3MTIzMjIzNjc3/healthiest-vegetables-jpg.jpg",
-      typeName: "Vegetables",
-      type: "vegetables",
+    _id: "1",
+    image:
+      "https://parade.com/.image/ar_16:9%2Cc_fill%2Ccs_srgb%2Cfl_progressive%2Cq_auto:good%2Cw_1200/MTkwNTgxMzY3MTIzMjIzNjc3/healthiest-vegetables-jpg.jpg",
+    typeName: "Vegetables",
+    type: "vegetables",
   },
   {
-      _id:'2',
-      image: "https://hips.hearstapps.com/hmg-prod/images/assortment-of-colorful-ripe-tropical-fruits-top-royalty-free-image-995518546-1564092355.jpg",
-      typeName: "Fruits",
-      type: "fruits",
+    _id: "2",
+    image:
+      "https://hips.hearstapps.com/hmg-prod/images/assortment-of-colorful-ripe-tropical-fruits-top-royalty-free-image-995518546-1564092355.jpg",
+    typeName: "Fruits",
+    type: "fruits",
   },
-  {   _id:'3',
-      image: "https://www.vinamilk.com.vn/static/uploads/editor/article%20img/shutterstock_603582332a.jpg",
-      typeName: "Animal Origin",
-      type: "animalOrigin",
+  {
+    _id: "3",
+    image:
+      "https://www.vinamilk.com.vn/static/uploads/editor/article%20img/shutterstock_603582332a.jpg",
+    typeName: "Animal Origin",
+    type: "animalOrigin",
   },
-]
+];
 
 function NutritionTab({ navigation }) {
   const [modalVisible, setModalVisible] = useState(false);
@@ -195,76 +199,87 @@ function NutritionTab({ navigation }) {
       </View>
       <View
         style={{
-          flexDirection: 'row',
-                justifyContent: 'center',
-                marginTop: 10,
-                borderRadius: 50,
-                margin: 10,
-                backgroundColor: Constants.COLOR.green,
-                shadowColor: '#000000',
-                shadowOffset: {
-                    width: 0,
-                    height: 3
-                },
-                shadowRadius: 7,
-                shadowOpacity: 1.0,
-                elevation: 5,
+          flexDirection: "row",
+          justifyContent: "center",
+          marginTop: 10,
+          borderRadius: 50,
+          margin: 10,
+          backgroundColor: Constants.COLOR.green,
+          shadowColor: "#000000",
+          shadowOffset: {
+            width: 0,
+            height: 3,
+          },
+          shadowRadius: 7,
+          shadowOpacity: 1.0,
+          elevation: 5,
         }}
       >
         {/* left */}
-        <View style={{
-                    height: windowHeight / 8,
-                    width: '40%',
-                    alignSelf: 'center',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    backgroundColor: Constants.COLOR.green,
-                    borderRadius: 50,
-                    paddingHorizontal: 5
-                }}>
-                    <FontLoader>
-                        <Text style={{
-                            fontFamily: 'RobotoRegular',
-                            fontSize: windowHeight / 36,
-                            color: Constants.COLOR.white,
-                            textAlignVertical: 'center',
-                            textAlign: 'center'
-                        }}>
-                            Daily calorie intake
-                        </Text>
-                    </FontLoader>
-                </View>
-                {/* main */}
-                <View style={{
-                    height: windowHeight / 8,
-                    width: '60%',
-                    backgroundColor: Constants.COLOR.white,
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    borderRadius: 50
-                }}>
-                    <FontLoader>
-                        <Text numberOfLines={1} ellipsizeMode="tail"
-                            style={{
-                                fontFamily: 'RobotoRegular',
-                                fontSize: windowHeight / 24,
-                                color: Constants.COLOR.green,
-                                paddingHorizontal: 8,
-                                textAlignVertical: 'center'
-                            }}>
-                            ~ {calorie}
-                        </Text>
-                        <Text style={{
-                            fontFamily: 'RobotoRegular',
-                            fontSize: windowHeight / 40,
-                            color: Constants.COLOR.blacksecondary,
-                            paddingHorizontal: 5,
-                        }}>
-                            Calories
-                        </Text>
-                    </FontLoader>
-                </View>
-            </View>
+        <View
+          style={{
+            height: windowHeight / 8,
+            width: "40%",
+            alignSelf: "center",
+            alignItems: "center",
+            justifyContent: "center",
+            backgroundColor: Constants.COLOR.green,
+            borderRadius: 50,
+            paddingHorizontal: 5,
+          }}
+        >
+          <FontLoader>
+            <Text
+              style={{
+                fontFamily: "RobotoRegular",
+                fontSize: windowHeight / 36,
+                color: Constants.COLOR.white,
+                textAlignVertical: "center",
+                textAlign: "center",
+              }}
+            >
+              Daily calorie intake
+            </Text>
+          </FontLoader>
+        </View>
+        {/* main */}
+        <View
+          style={{
+            height: windowHeight / 8,
+            width: "60%",
+            backgroundColor: Constants.COLOR.white,
+            alignItems: "center",
+            justifyContent: "center",
+            borderRadius: 50,
+          }}
+        >
+          <FontLoader>
+            <Text
+              numberOfLines={1}
+              ellipsizeMode="tail"
+              style={{
+                fontFamily: "RobotoRegular",
+                fontSize: windowHeight / 24,
+                color: Constants.COLOR.green,
+                paddingHorizontal: 8,
+                textAlignVertical: "center",
+              }}
+            >
+              ~ {calorie}
+            </Text>
+            <Text
+              style={{
+                fontFamily: "RobotoRegular",
+                fontSize: windowHeight / 40,
+                color: Constants.COLOR.blacksecondary,
+                paddingHorizontal: 5,
+              }}
+            >
+              Calories
+            </Text>
+          </FontLoader>
+        </View>
+      </View>
       {/* test */}
       {!isTested ? (
         isInfoUserLoading ? (

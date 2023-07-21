@@ -48,8 +48,8 @@ function FoodScreen({ navigation }) {
           backgroundColor: Constants.COLOR.green,
           flexDirection: "row",
           paddingTop: windowHeight / 26,
-          justifyContent: 'space-between',
-          paddingHorizontal: 10
+          justifyContent: "space-between",
+          paddingHorizontal: 10,
         }}
       >
         <CustomButton
