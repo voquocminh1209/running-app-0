@@ -1,17 +1,20 @@
 {
   "expo": {
     "plugins": [
-      ["expo-location", { "isAndroidBackgroundLocationEnabled": true } ]
+      [
+        "expo-location",
+        {
+          "isAndroidBackgroundLocationEnabled": true
+        }
+      ]
     ],
-    "name": "Run For Your Life",
-    "slug": "runforyourlife",
+    "name": "Running app",
+    "slug": "runningapp",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/logo.png",
+    "icon": "./assets/icon.png",
     "splash": {
-      "image": "./assets/logo.png",
-      "resizeMode": "contain",
-      "backgroundColor": "#22B14C"
+      "backgroundColor": "#30A2FF"
     },
     "updates": {
       "fallbackToCacheTimeout": 0
@@ -20,8 +23,13 @@
       "**/*"
     ],
     "ios": {
-      "bundleIdentifier": "com.devTeam.runforyourlife",
-      "buildNumber": "1.0.0"
+      "bundleIdentifier": "com.devTeam.runningapp",
+      "buildNumber": "1.0.0",
+      "infoPlist": {
+        "NSLocationAlwaysAndWhenInUseUsageDescription": "Allow $(PRODUCT_NAME) to access your location",
+        "NSLocationAlwaysUsageDescription": "Allow $(PRODUCT_NAME) to access your location",
+        "NSLocationWhenInUseUsageDescription": "Allow $(PRODUCT_NAME) to access your location"
+      }
     },
     "android": {
       "adaptiveIcon": {
@@ -31,13 +39,22 @@
       "permissions": [
         "ACCESS_BACKGROUND_LOCATION",
         "ACCESS_COARSE_LOCATION",
-        "ACCESS_FINE_LOCATION"
+        "ACCESS_FINE_LOCATION",
+        "android.permission.ACCESS_COARSE_LOCATION",
+        "android.permission.ACCESS_FINE_LOCATION",
+        "android.permission.FOREGROUND_SERVICE",
+        "android.permission.ACCESS_BACKGROUND_LOCATION"
       ],
-      "package": "com.devTeam.runforyourlife",
+      "package": "com.devTeam.runningapp",
       "versionCode": 1
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "565deba6-1436-425b-9d96-24f77e995e5b"
+      }
     }
   }
 }

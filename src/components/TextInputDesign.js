@@ -20,7 +20,7 @@ const TextInputDesign = ({placeholder, iconName, isSecured, onChangeText, onEndE
             paddingVertical:2,
             height: heightOfView
         }}>
-            <FontAwesome5 name={iconName} color="#4CD964" size={sizeOfIcon}/>
+            <FontAwesome5 name={iconName} color="#30A2FF" size={sizeOfIcon}/>
             <TextInput 
                 onEndEditing = {onEndEditing}
                 onChangeText = {onChangeText}
@@ -44,7 +44,7 @@ const TextInputDesign = ({placeholder, iconName, isSecured, onChangeText, onEndE
             paddingVertical:2,
             height: heightOfView
         }}>
-            <FontAwesome5 name={iconName} color="#4CD964" size={sizeOfIcon}/>
+            <FontAwesome5 name={iconName} color="#30A2FF" size={sizeOfIcon}/>
             <TextInput 
                 onEndEditing = {onEndEditing}
                 onChangeText = {onChangeText}

@@ -358,7 +358,11 @@ export default class SaveActivityScreen extends React.Component {
 
         <View style={styles.containerRecord}>
           <View style={styles.itemRecord}>
-            <MaterialCommunityIcons name="run-fast" size={24} color={Constants.COLOR.green} />
+            <MaterialCommunityIcons
+              name="run-fast"
+              size={24}
+              color={Constants.COLOR.green}
+            />
 
             <Text style={styles.itemContent}>{this.state.distance}</Text>
 
@@ -376,7 +380,11 @@ export default class SaveActivityScreen extends React.Component {
               },
             ]}
           >
-            <MaterialIcons name="timer" size={24} color={Constants.COLOR.green} />
+            <MaterialIcons
+              name="timer"
+              size={24}
+              color={Constants.COLOR.green}
+            />
 
             <Text style={styles.itemContent}>{this.state.time}</Text>
 
@@ -456,7 +464,7 @@ export default class SaveActivityScreen extends React.Component {
           minimumValue={0}
           maximumValue={5}
           step={1}
-          minimumTrackTintColor={"lime"}
+          minimumTrackTintColor={"#30A2FF"}
           thumbTintColor={Constants.COLOR.green}
           value={this.state.level}
           onValueChange={(value) => this.setState({ level: value })}
@@ -474,7 +482,9 @@ export default class SaveActivityScreen extends React.Component {
             ]}
             onPress={this.onPress_btnDiscard}
           >
-            <Text style={[styles.buttonTitle, { color: Constants.COLOR.green }]}>
+            <Text
+              style={[styles.buttonTitle, { color: Constants.COLOR.green }]}
+            >
               DISCARD
             </Text>
           </TouchableOpacity>
